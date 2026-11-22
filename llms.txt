@@ -1,0 +1,41 @@
+# Précis-Méca — Groupe Précis Méca SASU
+
+> Usinage mécanique de haute précision (tournage CNC, fraisage 3/4/5 axes, rectification plane, mécano-soudure, trempe cryogénique à l'azote liquide et contrôle 3D) à Aspach-Michelbach (68700, Haut-Rhin, Alsace, France). Entreprise familiale depuis 1986 (3e génération : Manuel Muller & Mégane Muller), 19 collaborateurs, atelier de 2 000 m².
+
+## Identité & Contact Officiels
+- Raison sociale : GROUPE PRECIS MECA SASU
+- SIREN : 491 735 155 · SIRET : 491 735 155 00021 · RCS Mulhouse · Capital : 719 850 €
+- Adresse : 313 rue Auguste Scheurer-Kestner, ZA du Pays de Thann, 68700 Aspach-Michelbach, France
+- Téléphone : +33 3 89 37 96 45 (03 89 37 96 45)
+- Email : info@precis-meca.fr
+- Horaires administration : Lun–Jeu 08h00–12h30 et 13h00–17h15 · Ven 08h00–12h00
+- Horaires réception / expéditions : Lun–Jeu 07h30–12h00 et 13h00–16h30 · Ven 07h00–11h30
+- Site web canonique : https://precis-meca.fr (FR par défaut, DE, EN)
+
+## Enveloppes & Capacités Clés
+- Tournage CNC et conventionnel : Ø 8 mm à Ø 1 600 mm, longueur jusqu'à 4 600 mm entre pointes (Cazeneuve HB750), tours CNC Gurutzpe A-1000/2 (Ø 1 400 × Z 3 000 mm) et Monfort (Ø 1 200 × Z 2 000 mm)
+- Tolérances d'usinage : jusqu'au 1/100e de mm (±0,01 mm) sur 1 600 mm
+- Centres d'usinage 3/4/5 axes : AWEA BM2500 4 axes continu (2 500 × 1 000 × 1 000 mm), DNM 6700 4 axes continu (1 300 × 670 × 620 mm), Huron DX 5 axes positionnés avec diviseur (1 200 × 540 × 500 mm), OKK VP600 3 axes 2 palettes (800 × 500 × 400 mm)
+- Rectification plane FANUC : 800 × 400 × 200 mm
+- Mécano-soudure : Plasma, TIG, Argon, MIG, MAG, brasage (Inox, Acier, Aluminium)
+- Traitements & finition : Réservoir d'azote liquide (trempe 1 à 2 h), traitement acide, tribofinition, micro-billage, fontaine biologique Ceetal, scie Kasto Ø 450 mm
+- FAO / DAO : AutoCAD (DAO) + GibbsCAM (FAO), intégration directe des plans DWG / DXF
+
+## Métaux & Alliages Nobles Usinés
+Inox (304, 316, réfractaires), Inconel, Hastelloy, Monel, Stellite, Titane, Nickel, Alloy, Aluminium, Cuivre, Bronze, Laiton, Cupro-Aluminium.
+
+## Métrologie & Contrôle Qualité
+- MMT 3D Mitutoyo Crysta-Apex C (900 × 1 600 × 600 mm)
+- Colonne de mesure Mitutoyo LH-600
+- Jauge grandes dimensions Unimaster
+- Micromètres extérieurs Ø 0 à 1 500 mm · Micromètres intérieurs Ø 6 à 300 mm
+- Pieds à coulisse jusqu'à 2 000 mm · Vision optique jusqu'à 0,001 mm · Contrôle rugosité Mitutoyo
+- Toutes les pièces sont contrôlées en salle de métrologie et livrées avec rapport de contrôle (certificat matière sur demande).
+
+## Secteurs Clients (France · Allemagne · Suisse)
+Cryogénie, Aéronautique, Robotique, Hydraulique, Chimie, Pétrochimie, Agroalimentaire, Industrie métallurgique.
+
+## Pages Principales
+- FR : https://precis-meca.fr/fr · /fr/savoir-faire · /fr/parc-machines · /fr/controle-qualite · /fr/entreprise · /fr/contact · /fr/mentions-legales
+- DE : https://precis-meca.fr/de · /de/kompetenzen · /de/maschinenpark · /de/qualitaet-messtechnik · /de/unternehmen · /de/kontakt · /de/impressum
+- EN : https://precis-meca.fr/en · /en/capabilities · /en/machine-fleet · /en/quality-metrology · /en/company · /en/contact · /en/legal

@@ -1,0 +1,101 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "www.precis-meca.fr" }],
+      "destination": "https://precis-meca.fr/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "precis-meca.com" }],
+      "destination": "https://precis-meca.fr/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "www.precis-meca.com" }],
+      "destination": "https://precis-meca.fr/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "precismeca.fr" }],
+      "destination": "https://precis-meca.fr/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "www.precismeca.fr" }],
+      "destination": "https://precis-meca.fr/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "precis-meca-68.fr" }],
+      "destination": "https://precis-meca.fr/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "www.precis-meca-68.fr" }],
+      "destination": "https://precis-meca.fr/$1",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "precis-meca.de" }],
+      "destination": "/de",
+      "permanent": false
+    },
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "www.precis-meca.de" }],
+      "destination": "/de",
+      "permanent": false
+    },
+    {
+      "source": "/",
+      "missing": [{ "type": "query", "key": "choose" }],
+      "destination": "/fr",
+      "permanent": false
+    },
+    { "source": "/notre-savoir-faire.html", "destination": "/fr/savoir-faire", "permanent": true },
+    { "source": "/notre-savoir-faire", "destination": "/fr/savoir-faire", "permanent": true },
+    { "source": "/parc-machines.html", "destination": "/fr/parc-machines", "permanent": true },
+    { "source": "/parc-machines", "destination": "/fr/parc-machines", "permanent": true },
+    { "source": "/controle-qualite.html", "destination": "/fr/controle-qualite", "permanent": true },
+    { "source": "/controle-qualite", "destination": "/fr/controle-qualite", "permanent": true },
+    { "source": "/category/recrutements", "destination": "/fr/entreprise#recrutement", "permanent": true },
+    { "source": "/contact.html", "destination": "/fr/contact", "permanent": true },
+    { "source": "/contact", "destination": "/fr/contact", "permanent": true },
+    { "source": "/mentions-politique.html", "destination": "/fr/mentions-legales", "permanent": true },
+    { "source": "/mentions-politique", "destination": "/fr/mentions-legales", "permanent": true },
+    { "source": "/sitemap.html", "destination": "/sitemap.xml", "permanent": true }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Strict-Transport-Security", "value": "max-age=31536000; includeSubDomains; preload" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
+    },
+    {
+      "source": "/(css|js)/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600, must-revalidate" }
+      ]
+    },
+    {
+      "source": "/(images|videos)/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400, must-revalidate" }
+      ]
+    }
+  ]
+}

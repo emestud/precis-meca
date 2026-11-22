@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="PM">
+  
+  <defs>
+    <linearGradient id="bronzeRibbonA" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8C5D1E"/>
+      <stop offset="28%" stop-color="#D4A24E"/>
+      <stop offset="56%" stop-color="#F6E299"/>
+      <stop offset="82%" stop-color="#C8923E"/>
+      <stop offset="100%" stop-color="#80531A"/>
+    </linearGradient>
+    <linearGradient id="bronzeRibbonB" x1="15%" y1="100%" x2="85%" y2="0%">
+      <stop offset="0%" stop-color="#764B14"/>
+      <stop offset="40%" stop-color="#BD8736"/>
+      <stop offset="72%" stop-color="#F0D788"/>
+      <stop offset="100%" stop-color="#A6742A"/>
+    </linearGradient>
+    <linearGradient id="bronzeRibbonC" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#9A6925"/>
+      <stop offset="48%" stop-color="#F7E49E"/>
+      <stop offset="100%" stop-color="#C28D3B"/>
+    </linearGradient>
+    <linearGradient id="bronzeStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBE9AB" stop-opacity="0.7"/>
+      <stop offset="50%" stop-color="#C99646" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#F6E299" stop-opacity="0.65"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="32" cy="32" r="29" fill="#14171B" stroke="#C99646" stroke-width="2.2"/>
+  <circle cx="32" cy="32" r="25.5" fill="none" stroke="#F4DF96" stroke-width="0.6" stroke-dasharray="3 4" stroke-opacity="0.55"/>
+  <g transform="translate(9.2,19.6) scale(0.39)">
+    <!-- P: back upper arch & horizontal machined bridge -->
+    <path d="M 1.2,4 L 31.2,4 C 41.6,4 47.6,10.8 47.6,20.5 C 47.6,24.8 46.6,28.4 44.8,31.2 C 42.4,24.6 36.8,21.4 28.6,21.4 L 12.2,21.4 L 12.2,14.4 L 30.2,14.4 C 34.4,14.4 37.0,16.1 38.0,19.4 C 37.4,12.5 32.5,10.6 25.0,10.6 L 1.2,10.6 Z" fill="url(#bronzeRibbonB)" stroke="url(#bronzeStroke)" stroke-width="0.4"/>
+    <!-- P: smooth folded ribbon wrapping left edge into center waist -->
+    <path d="M 1.2,4.4 C 1.2,15.6 7.4,22.2 18.8,22.2 L 30.8,22.2 C 38.6,22.2 43.2,26.4 44.2,32.6 C 41.6,37.8 36.5,40.8 29.2,40.8 L 13.5,40.8 C 5.6,40.8 1.2,35.8 1.2,26.6 Z" fill="url(#bronzeRibbonA)" stroke="url(#bronzeStroke)" stroke-width="0.4"/>
+    <!-- P: sculpted lower leg -->
+    <path d="M 1.2,37.8 C 4.2,41.2 8.2,42.8 13.2,42.8 L 13.2,47.8 C 13.2,54.8 8.2,59.5 1.2,59.5 Z" fill="url(#bronzeRibbonB)" stroke="url(#bronzeStroke)" stroke-width="0.4"/>
+
+    <!-- M: left vertical pillar -->
+    <path d="M 55.2,16.5 L 67.2,28.8 L 67.2,49.5 C 67.2,56 62.4,59.5 55.2,59.5 Z" fill="url(#bronzeRibbonB)" stroke="url(#bronzeStroke)" stroke-width="0.4"/>
+    <!-- M: left diagonal ribbon folding around valley -->
+    <path d="M 55.2,4 L 61.5,4 C 64.5,4 66.8,5.6 68.8,8.4 L 86.4,34.4 C 89.4,38.8 92.6,41.2 96.4,41.6 L 91.2,51.2 C 88.5,56.2 85.4,59.5 81.4,59.5 C 77.6,59.5 74.6,56.4 71.2,51.4 L 55.2,27.6 Z" fill="url(#bronzeRibbonA)" stroke="url(#bronzeStroke)" stroke-width="0.4"/>
+    <!-- M: right diagonal sweeping cleanly into valley fold -->
+    <path d="M 115.2,4 L 108.8,4 C 105.8,4 103.5,5.6 101.4,8.6 L 83.2,35.4 C 86.2,39.8 89.2,42.4 92.8,43.2 L 103.2,27.8 L 115.2,15.5 Z" fill="url(#bronzeRibbonC)" stroke="url(#bronzeStroke)" stroke-width="0.4"/>
+    <!-- M: right vertical pillar -->
+    <path d="M 103.2,29.8 L 115.2,17.6 L 115.2,59.5 C 108.0,59.5 103.2,56.0 103.2,49.5 Z" fill="url(#bronzeRibbonB)" stroke="url(#bronzeStroke)" stroke-width="0.4"/>
+  </g>
+</svg>
