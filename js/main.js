@@ -315,9 +315,30 @@
     updateRfq();
   }
 
-  /* Smooth hero video fade-in when ready */
+  /* Smooth hero video fade-in when ready + corner dock pause/play toggle */
   var heroVid = document.getElementById("heroBgVideo");
+  var heroBgToggle = document.getElementById("heroBgToggle");
   if (heroVid && !prefersReduced) {
     heroVid.play().catch(function () {});
+  }
+  if (heroVid && heroBgToggle) {
+    var pauseLbl = heroBgToggle.getAttribute("data-pause-label") || "❚❚ Pause";
+    var playLbl = heroBgToggle.getAttribute("data-play-label") || "▶ Play";
+    var syncBgToggle = function () {
+      var paused = heroVid.paused;
+      heroBgToggle.textContent = paused ? playLbl : pauseLbl;
+      heroBgToggle.setAttribute("aria-pressed", paused ? "true" : "false");
+    };
+    heroBgToggle.addEventListener("click", function () {
+      if (heroVid.paused) {
+        heroVid.play().catch(function () {});
+      } else {
+        heroVid.pause();
+      }
+      syncBgToggle();
+    });
+    heroVid.addEventListener("play", syncBgToggle);
+    heroVid.addEventListener("pause", syncBgToggle);
+    syncBgToggle();
   }
 })();

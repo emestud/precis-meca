@@ -445,8 +445,10 @@ main {
 
 .hero-stage {
   position: relative;
-  min-height: 620px;
-  padding: 56px 0 68px;
+  min-height: clamp(560px, 78vh, 760px);
+  display: flex;
+  align-items: flex-end;
+  padding: 48px 0 40px;
   overflow: hidden;
   background: var(--bg-carbide-deep);
 }
@@ -465,7 +467,7 @@ main {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: saturate(0.82) contrast(1.08);
+  filter: contrast(1.04) saturate(1.06) brightness(1.02);
 }
 
 .hero-scrim {
@@ -473,33 +475,25 @@ main {
   inset: 0;
   z-index: 1;
   background:
-    linear-gradient(90deg, rgba(11, 14, 18, 0.94) 0%, rgba(17, 20, 24, 0.84) 54%, rgba(17, 20, 24, 0.62) 100%),
-    radial-gradient(ellipse 70% 60% at 30% 10%, rgba(201, 150, 70, 0.14), transparent);
+    linear-gradient(90deg, rgba(11, 14, 18, 0.84) 0%, rgba(11, 14, 18, 0.54) 38%, rgba(11, 14, 18, 0.14) 68%, rgba(11, 14, 18, 0.05) 100%),
+    linear-gradient(180deg, rgba(11, 14, 18, 0.18) 0%, rgba(11, 14, 18, 0.06) 45%, rgba(11, 14, 18, 0.72) 100%);
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
+  width: 100%;
 }
 
-.vernier-scale-top {
+.hero-layout {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
-  padding-bottom: 14px;
-  margin-bottom: 28px;
-  border-bottom: 1px solid rgba(201, 150, 70, 0.22);
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  color: var(--bronze-bright);
-  letter-spacing: 0.08em;
+  gap: 32px;
 }
 
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.25fr 0.85fr;
-  gap: 44px;
-  align-items: center;
+.hero-copy {
+  max-width: 580px;
 }
 
 .kicker {
@@ -535,12 +529,13 @@ main {
 
 .hero-title {
   font-family: var(--font-display);
-  font-size: clamp(2.1rem, 4.4vw, 3.6rem);
+  font-size: clamp(2.1rem, 4.2vw, 3.35rem);
   font-weight: 700;
   line-height: 1.07;
   letter-spacing: -0.025em;
-  margin: 0 0 18px;
+  margin: 0 0 16px;
   color: var(--ink-light);
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.65);
 }
 
 .text-bronze {
@@ -552,10 +547,11 @@ main {
 }
 
 .hero-lead {
-  font-size: 1.08rem;
-  color: #cbd5e1;
-  max-width: 640px;
-  margin: 0 0 26px;
+  font-size: 1.02rem;
+  color: #e2e8f0;
+  max-width: 540px;
+  margin: 0 0 24px;
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.75);
 }
 
 .hero-cta-row {
@@ -563,27 +559,58 @@ main {
   flex-wrap: wrap;
   align-items: center;
   gap: 12px;
-  margin-bottom: 26px;
+  margin-bottom: 0;
 }
 
-.hero-credentials {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
-  padding-top: 18px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+.hero-stage .btn-glass,
+.hero-stage .copy-pill {
+  background: rgba(11, 14, 18, 0.68);
+  backdrop-filter: blur(10px);
 }
 
-.hero-cred-label {
+.hero-video-dock {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px;
+  border-radius: 999px;
+  background: rgba(11, 14, 18, 0.68);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  flex-shrink: 0;
+}
+
+.hero-dock-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 13px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--ink-light);
   font-family: var(--font-mono);
-  font-size: 0.74rem;
-  font-weight: 700;
-  color: var(--bronze-bright);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease;
 }
 
-.hero-cred-sub {
-  font-size: 0.8rem;
-  color: var(--ink-light-muted);
+.hero-dock-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--bronze-champagne);
+}
+
+.hero-dock-btn-accent {
+  background: rgba(201, 150, 70, 0.16);
+  border-color: var(--border-bronze);
+  color: var(--bronze-champagne);
+}
+
+.hero-dock-btn-accent:hover {
+  background: rgba(201, 150, 70, 0.28);
 }
 
 /* Telemetry HUD Card */
@@ -846,6 +873,118 @@ main {
   font-size: 0.85rem;
   color: var(--ink-light-muted);
   margin: 0;
+}
+
+/* ---------- Compact Telemetry Strip (Below Hero) ---------- */
+.telemetry-strip {
+  background: var(--bg-carbide-deep);
+  border-top: 1px solid rgba(201, 150, 70, 0.28);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 16px 0 20px;
+}
+
+.telemetry-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px 20px;
+  padding-bottom: 12px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.telemetry-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--bronze-champagne);
+}
+
+.telemetry-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--emerald);
+  box-shadow: 0 0 8px var(--emerald);
+}
+
+.telemetry-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--ink-light-muted);
+}
+
+.telemetry-badge {
+  padding: 3px 9px;
+  border-radius: 999px;
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  background: rgba(56, 189, 248, 0.08);
+  color: var(--cryo);
+  font-weight: 600;
+}
+
+.telemetry-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.telemetry-cell {
+  background: rgba(26, 30, 36, 0.78);
+  border: 1px solid var(--border-dark);
+  border-left: 2px solid var(--bronze);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+}
+
+.telemetry-cell.is-cryo {
+  border-left-color: var(--cryo);
+}
+
+.telemetry-cell-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--ink-light-muted);
+  margin-bottom: 4px;
+}
+
+.telemetry-cell-val {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--ink-light);
+  margin-bottom: 3px;
+}
+
+.telemetry-cell.is-cryo .telemetry-cell-val {
+  color: var(--cryo);
+}
+
+.telemetry-cell-sub {
+  font-size: 0.78rem;
+  color: var(--ink-light-muted);
+  margin: 0 0 8px;
+}
+
+.telemetry-cell .hud-bar {
+  margin-top: 0;
 }
 
 /* ---------- Cards & Bento Grids ---------- */
@@ -1459,6 +1598,9 @@ main {
   .rfq-layout {
     grid-template-columns: 1fr;
   }
+  .telemetry-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   .matcher-bar {
     grid-template-columns: 1fr 1fr;
   }
@@ -1475,7 +1617,24 @@ main {
   .brand-logo img {
     height: 36px;
   }
+  .hero-stage {
+    min-height: 520px;
+    padding: 36px 0 28px;
+  }
+  .hero-layout {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+  }
+  .hero-video-dock {
+    align-self: flex-start;
+    flex-wrap: wrap;
+  }
+  .hero-scrim {
+    background: linear-gradient(180deg, rgba(11, 14, 18, 0.25) 0%, rgba(11, 14, 18, 0.64) 45%, rgba(11, 14, 18, 0.88) 100%);
+  }
   .kpi-grid,
+  .telemetry-grid,
   .badge-row,
   .grid-2,
   .grid-3,
@@ -1490,17 +1649,14 @@ main {
   .gallery-grid {
     grid-template-columns: 1fr 1fr;
   }
-  .hero-credentials {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
-  .hero-media video {
+  .hero-media video,
+  .hero-dock-toggle {
     display: none;
   }
   *,
