@@ -37,7 +37,10 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="brand-logo" href="/de" aria-label="Précis-Méca">
-        <img src="/images/logo-precis-meca.svg" alt="Précis-Méca — Usinage Haute Précision" />
+        <picture>
+          <source media="(max-width: 560px)" srcset="/images/logo-precis-meca-compact.svg" />
+          <img src="/images/logo-precis-meca.svg" alt="Précis-Méca — Usinage Haute Précision" />
+        </picture>
       </a>
       <nav class="main-nav" aria-label="Navigation">
         <a class="nav-link" href="/de">Startseite</a><a class="nav-link" href="/de/kompetenzen">Kompetenzen</a><a class="nav-link" href="/de/maschinenpark">Maschinenpark</a><a class="nav-link" href="/de/qualitaet-messtechnik">Qualität</a><a class="nav-link" href="/de/unternehmen">Unternehmen</a>
@@ -58,7 +61,7 @@
     <div class="drawer-backdrop" data-drawer-close></div>
     <div class="drawer-panel">
       <div style="display:flex;align-items:center;justify-content:space-between;">
-        <img src="/images/logo-precis-meca.svg" alt="Précis-Méca" style="height:36px;width:auto;" />
+        <img src="/images/logo-precis-meca-compact.svg" alt="Précis-Méca" style="height:30px;width:auto;" />
         <button class="mobile-toggle" style="display:inline-flex;" type="button" data-drawer-close aria-label="Menü schließen">✕</button>
       </div>
       <nav class="drawer-nav">
@@ -77,23 +80,36 @@
     
     <section class="page-hero cad-grid-dark">
       <div class="container">
-        <span class="kicker">DIREKTER KONTAKT &amp; ANGEBOTSANFRAGE · +33 3 89 37 96 45</span>
-        <h1 class="page-hero-title">Kontakt &amp; <span class="text-bronze">Technische Anfrage</span></h1>
-        <p class="page-hero-lead">Konfigurieren Sie Ihre technische Anfrage unten und senden Sie Ihre DWG/DXF-Zeichnungen an info@precis-meca.fr — direkt für Kunden aus Deutschland, der Schweiz und Frankreich.</p>
+        <span class="kicker">DIREKTER KONTAKT · +33 3 89 37 96 45</span>
+        <h1 class="page-hero-title">Sprechen wir über <span class="text-bronze">Ihr Projekt</span></h1>
+        <p class="page-hero-lead">Neukunde, Eilprototyp oder Serienauftrag: Rufen Sie uns direkt an, senden Sie Ihre Zeichnung oder nutzen Sie den optionalen Projekt-Assistenten unten.</p>
       </div>
     </section>
 
     <section class="section section-dark cad-grid-dark">
       <div class="container">
+        <div class="direct-contact-card">
+          <div>
+            <span class="card-kicker">DIREKTER KONTAKT · PERSÖNLICHE BERATUNG</span>
+            <h2 class="section-title" style="font-size:clamp(1.35rem,2.4vw,1.85rem);margin-bottom:6px;">Sprechen Sie direkt mit unserem Team</h2>
+            <p style="margin:0 0 10px;color:var(--ink-light-muted);max-width:650px;">Sie brauchen kein komplettes Formular zum Starten: Rufen Sie uns an oder senden Sie uns Ihre Zeichnung (PDF, DWG, DXF) oder ein Musterteil.</p>
+            <p class="font-mono" style="margin:0;font-size:0.74rem;color:var(--bronze-champagne);">Persönliche Beratung · Einzelteil oder Serie · 3D-Mitutoyo-Prüfbericht</p>
+          </div>
+          <div class="direct-contact-actions">
+            <a class="btn btn-bronze" href="tel:+33389379645">Anrufen: 03 89 37 96 45</a>
+            <a class="btn btn-glass" href="mailto:info@precis-meca.fr?subject=Demande%20de%20devis%20Pr%C3%A9cis-M%C3%A9ca">Zeichnung per E-Mail senden</a>
+          </div>
+        </div>
+
         <div class="rfq-layout">
           <form class="rfq-panel" id="rfqConfigurator" onsubmit="return false;">
-            <span class="card-kicker">RFQ · DWG / DXF · MITUTOYO</span>
-            <h2 class="section-title" style="font-size:1.5rem;margin-bottom:22px;">Technischer RFQ-Konfigurator</h2>
+            <span class="card-kicker">RFQ · DWG / DXF / PDF</span>
+            <h2 class="section-title" style="font-size:1.4rem;margin-bottom:20px;">Oder Anfrage in wenigen Klicks vorbereiten (optional)</h2>
 
             <div class="rfq-group">
               <span class="rfq-label">1. Gewünschte Verfahren</span>
-              <div class="chip-grid"><label class="chip-check"><input type="checkbox" name="proc" value="CNC-Drehen (Ø 8–1 600 mm)" checked /><span>CNC-Drehen (Ø 8–1 600 mm)</span></label>
-<label class="chip-check"><input type="checkbox" name="proc" value="3/4/5-Achs-Fräsen (bis 2 500 mm)" /><span>3/4/5-Achs-Fräsen (bis 2 500 mm)</span></label>
+              <div class="chip-grid"><label class="chip-check"><input type="checkbox" name="proc" value="CNC-Drehen (Ø 8–1 600 mm)" checked /><span>CNC-Drehen (Ø 8–1 600 mm)</span></label>
+<label class="chip-check"><input type="checkbox" name="proc" value="3/4/5-Achs-Fräsen (bis 2 500 mm)" /><span>3/4/5-Achs-Fräsen (bis 2 500 mm)</span></label>
 <label class="chip-check"><input type="checkbox" name="proc" value="CNC-Flachschleifen" /><span>CNC-Flachschleifen</span></label>
 <label class="chip-check"><input type="checkbox" name="proc" value="WIG/MIG/Plasma-Schweißen" /><span>WIG/MIG/Plasma-Schweißen</span></label>
 <label class="chip-check"><input type="checkbox" name="proc" value="Flüssigstickstoff / Säurebeizen" /><span>Flüssigstickstoff / Säurebeizen</span></label>
@@ -111,10 +127,10 @@
               </div>
               <div>
                 <label class="rfq-label" for="rfqEnv">3. Bauteilgröße</label>
-                <select class="field-input" id="rfqEnv" name="envelope"><option value="Ø 8 bis Ø 250 mm">Ø 8 bis Ø 250 mm</option>
-<option value="Ø 250 bis Ø 600 mm">Ø 250 bis Ø 600 mm</option>
-<option value="Ø 600 bis Ø 1 600 mm / Überlänge">Ø 600 bis Ø 1 600 mm / Überlänge</option>
-<option value="Fräsen bis 2 500 × 1 000 mm">Fräsen bis 2 500 × 1 000 mm</option></select>
+                <select class="field-input" id="rfqEnv" name="envelope"><option value="Ø 8 bis Ø 250 mm">Ø 8 bis Ø 250 mm</option>
+<option value="Ø 250 bis Ø 600 mm">Ø 250 bis Ø 600 mm</option>
+<option value="Ø 600 bis Ø 1 600 mm / Überlänge">Ø 600 bis Ø 1 600 mm / Überlänge</option>
+<option value="Fräsen bis 2 500 × 1 000 mm">Fräsen bis 2 500 × 1 000 mm</option></select>
               </div>
             </div>
 
@@ -151,13 +167,13 @@
 
             <div class="rfq-group">
               <label class="rfq-label" for="f_notes">Toleranzen, Liefertermin oder Hinweise</label>
-              <textarea id="f_notes" class="field-input" rows="3" name="notes" placeholder="z. B. Passung H7, Rundlauf 0,05 mm..."></textarea>
+              <textarea id="f_notes" class="field-input" rows="3" name="notes" placeholder="z. B. Passung H7, Rundlauf 0,05 mm..."></textarea>
             </div>
 
             <span class="rfq-label">Live-Vorschau Ihrer technischen Anfrage</span>
             <pre class="brief-terminal" id="rfqBriefPreview"></pre>
             <div style="display:flex;flex-wrap:wrap;gap:10px;">
-              <a class="btn btn-bronze" id="rfqSendEmail" href="mailto:info@precis-meca.fr">In E-Mail-Programm öffnen (info@precis-meca.fr) →</a>
+              <a class="btn btn-bronze" id="rfqSendEmail" href="mailto:info@precis-meca.fr">Per E-Mail senden →</a>
               <button class="btn btn-glass" id="rfqCopyBtn" type="button">Briefing kopieren</button>
             </div>
           </form>
@@ -172,7 +188,7 @@
                 <span class="font-mono text-bronze">47°45'51"N · 7°09'18"E</span>
               </p>
               <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:16px;">
-                <a class="btn btn-bronze btn-sm" href="tel:+33389379645">03 89 37 96 45</a>
+                <a class="btn btn-bronze btn-sm" href="tel:+33389379645">03&#160;89&#160;37&#160;96&#160;45</a>
                 <a class="btn btn-glass btn-sm" href="mailto:info@precis-meca.fr">info@precis-meca.fr</a>
               </div>
               <div class="hud-split"><div class="hud-mini"><span style="font-size:0.74rem;color:var(--ink-light-muted);">Mulhouse / A36</span><div class="hud-mini-val" style="font-size:1.05rem;">20 Min.</div></div>
@@ -182,7 +198,7 @@
             </div>
 
             <div class="card-dark">
-              <span class="card-kicker">LOGISTIQUE & BUREAUX</span>
+              <span class="card-kicker">LOGISTIQUE &amp; BUREAUX</span>
               <h3 class="card-title">Getrennte Öffnungszeiten (Büro &amp; Wareneingang)</h3>
               <div class="hud-row">
                 <div class="hud-row-meta"><strong style="color:var(--bronze-bright);">Verwaltung / Einkauf</strong></div>
@@ -207,7 +223,7 @@
           </div>
         </div>
         <div class="grid-3"><article class="card-light"><h3 class="card-title">Welche CAD-Formate können für die Anfrage genutzt werden?</h3><p style="margin:0;color:var(--ink-dark-muted);">Wir arbeiten mit AutoCAD (CAD) und GibbsCAM (CAM). Per E-Mail an info@precis-meca.fr gesendete DWG- und DXF-Dateien sowie bemaßte PDF-Zeichnungen werden direkt eingelesen.</p></article>
-<article class="card-light"><h3 class="card-title">Was sind die maximalen Bearbeitungsmaße bei Précis-Méca?</h3><p style="margin:0;color:var(--ink-dark-muted);">Wir drehen von Ø 8 bis Ø 1 600 mm (bis Ø 1 400 × 3 000 mm auf CNC Gurutzpe, Spitzenweite bis 4 600 mm auf Cazeneuve HB750) und fräsen bis 2 500 × 1 000 × 1 000 mm auf dem 4-Achs-Zentrum AWEA.</p></article>
+<article class="card-light"><h3 class="card-title">Was sind die maximalen Bearbeitungsmaße bei Précis-Méca?</h3><p style="margin:0;color:var(--ink-dark-muted);">Wir drehen von Ø 8 bis Ø 1 600 mm (bis Ø 1 400 × 3 000 mm auf CNC Gurutzpe, Spitzenweite bis 4 600 mm auf Cazeneuve HB750) und fräsen bis 2 500 × 1 000 × 1 000 mm auf dem 4-Achs-Zentrum AWEA.</p></article>
 <article class="card-light"><h3 class="card-title">Werden Prüfprotokolle und Werkstoffzeugnisse mitgeliefert?</h3><p style="margin:0;color:var(--ink-dark-muted);">Ja. Alle Bauteile werden im Messraum (Mitutoyo Crysta-Apex C 3D-KMG, LH-600, Unimaster) geprüft und mit Prüfbericht geliefert. Werkstoffzeugnisse stellen wir auf Anfrage bereit.</p></article></div>
       </div>
     </section>
@@ -217,8 +233,8 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <img src="/images/logo-precis-meca.svg" alt="Précis-Méca" style="height:44px;width:auto;margin-bottom:14px;" />
-          <p style="font-size:0.88rem;color:var(--ink-light-muted);margin:0 0 14px;">Elsässisches Familienunternehmen für Präzisionsmechanik und CNC-Lohnfertigung seit 1986 (3. Generation: Manuel &amp; Mégane Muller). 2 000 m² Werkshalle, 19 Fachkräfte.</p>
+          <img src="/images/logo-precis-meca.svg" alt="Précis-Méca" style="height:40px;width:auto;margin-bottom:14px;" />
+          <p style="font-size:0.88rem;color:var(--ink-light-muted);margin:0 0 14px;">Elsässisches Familienunternehmen für CNC-Präzisionszerspanung seit 1986 (Manuel &amp; Mégane Muller). Persönliche Begleitung vom Einzelteil bis zur Serie.</p>
           <div style="display:flex;gap:10px;flex-wrap:wrap;">
             <a class="btn btn-glass btn-sm" href="https://fr.linkedin.com/company/groupe-precis-meca-sasu/" target="_blank" rel="noopener">LinkedIn</a>
             <a class="btn btn-glass btn-sm" href="https://www.facebook.com/people/Groupe-Precis-Meca-SASU/100041220146256/" target="_blank" rel="noopener">Facebook</a>
@@ -235,10 +251,10 @@
         </div>
         <div>
           <h3 class="footer-heading">Kapazitäten &amp; Technik</h3>
-          <ul class="footer-list"><li>CNC-Drehen: Ø 8 bis Ø 1 600 mm</li>
-<li>Spitzenweite: bis 4 600 mm</li>
-<li>3/4/5-Achs-Fräsen: bis 2 500 mm</li>
-<li>Genauigkeit: 1/100 mm (± 0,01 mm)</li>
+          <ul class="footer-list"><li>CNC-Drehen: Ø 8 bis Ø 1 600 mm</li>
+<li>Spitzenweite: bis 4 600 mm</li>
+<li>3/4/5-Achs-Fräsen: bis 2 500 mm</li>
+<li>Genauigkeit: 1/100 mm (± 0,01 mm)</li>
 <li>CAD AutoCAD · CAM GibbsCAM (DWG / DXF)</li></ul>
         </div>
         <div>
@@ -253,7 +269,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 1986–2026 GROUPE PRECIS MECA SASU · SIREN 491 735 155 · RCS Mulhouse · Stammkapital 719 850 €</span>
+        <span>© 1986–2026 GROUPE PRECIS MECA SASU · SIREN 491 735 155 · RCS Mulhouse · Stammkapital 719 850 €</span>
         <a href="/de/impressum">Impressum &amp; Datenschutz</a>
       </div>
     </div>

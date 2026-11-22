@@ -319,6 +319,14 @@
   var heroVid = document.getElementById("heroBgVideo");
   var heroBgToggle = document.getElementById("heroBgToggle");
   if (heroVid && !prefersReduced) {
+    var markVidReady = function () {
+      if (heroVid.videoWidth > 0) {
+        heroVid.classList.add("is-ready");
+      }
+    };
+    heroVid.addEventListener("loadeddata", markVidReady);
+    heroVid.addEventListener("playing", markVidReady);
+    if (heroVid.readyState >= 2) markVidReady();
     heroVid.play().catch(function () {});
   }
   if (heroVid && heroBgToggle) {

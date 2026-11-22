@@ -37,7 +37,10 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="brand-logo" href="/fr" aria-label="Précis-Méca">
-        <img src="/images/logo-precis-meca.svg" alt="Précis-Méca — Usinage Haute Précision" />
+        <picture>
+          <source media="(max-width: 560px)" srcset="/images/logo-precis-meca-compact.svg" />
+          <img src="/images/logo-precis-meca.svg" alt="Précis-Méca — Usinage Haute Précision" />
+        </picture>
       </a>
       <nav class="main-nav" aria-label="Navigation">
         <a class="nav-link" href="/fr">Accueil</a><a class="nav-link" href="/fr/savoir-faire">Savoir-faire</a><a class="nav-link" href="/fr/parc-machines">Parc machines</a><a class="nav-link" href="/fr/controle-qualite">Contrôle qualité</a><a class="nav-link" href="/fr/entreprise">Entreprise</a>
@@ -58,7 +61,7 @@
     <div class="drawer-backdrop" data-drawer-close></div>
     <div class="drawer-panel">
       <div style="display:flex;align-items:center;justify-content:space-between;">
-        <img src="/images/logo-precis-meca.svg" alt="Précis-Méca" style="height:36px;width:auto;" />
+        <img src="/images/logo-precis-meca-compact.svg" alt="Précis-Méca" style="height:30px;width:auto;" />
         <button class="mobile-toggle" style="display:inline-flex;" type="button" data-drawer-close aria-label="Fermer le menu">✕</button>
       </div>
       <nav class="drawer-nav">
@@ -77,23 +80,36 @@
     
     <section class="page-hero cad-grid-dark">
       <div class="container">
-        <span class="kicker">LIAISON INDUSTRIELLE &amp; CHIFFRAGE TECHNIQUE · 03 89 37 96 45</span>
-        <h1 class="page-hero-title">Contact &amp; <span class="text-bronze">Devis Technique</span></h1>
-        <p class="page-hero-lead">Préparez votre cahier des charges ci-dessous et transmettez vos plans DWG / DXF à info@precis-meca.fr, ou contactez directement notre atelier d&#x27;Aspach-Michelbach.</p>
+        <span class="kicker">ÉCHANGE DIRECT · 03 89 37 96 45</span>
+        <h1 class="page-hero-title">Parlons de <span class="text-bronze">votre projet</span></h1>
+        <p class="page-hero-lead">Nouveau client, prototype urgent ou série : contactez-nous directement par téléphone ou e-mail, ou préparez votre besoin en quelques clics ci-dessous.</p>
       </div>
     </section>
 
     <section class="section section-dark cad-grid-dark">
       <div class="container">
+        <div class="direct-contact-card">
+          <div>
+            <span class="card-kicker">CONTACT DIRECT · RÉPONSE RAPIDE</span>
+            <h2 class="section-title" style="font-size:clamp(1.35rem,2.4vw,1.85rem);margin-bottom:6px;">Parlez directement à notre équipe</h2>
+            <p style="margin:0 0 10px;color:var(--ink-light-muted);max-width:650px;">Pas besoin de dossier complexe pour démarrer : appelez l&#x27;atelier ou envoyez-nous votre plan (PDF, DWG, DXF, croquis ou modèle à reproduire).</p>
+            <p class="font-mono" style="margin:0;font-size:0.74rem;color:var(--bronze-champagne);">Conseil personnalisé · Pièce unique, dépannage ou série · Contrôle 3D Mitutoyo</p>
+          </div>
+          <div class="direct-contact-actions">
+            <a class="btn btn-bronze" href="tel:+33389379645">Appeler le 03 89 37 96 45</a>
+            <a class="btn btn-glass" href="mailto:info@precis-meca.fr?subject=Demande%20de%20devis%20Pr%C3%A9cis-M%C3%A9ca">Envoyer un plan par e-mail</a>
+          </div>
+        </div>
+
         <div class="rfq-layout">
           <form class="rfq-panel" id="rfqConfigurator" onsubmit="return false;">
-            <span class="card-kicker">RFQ · DWG / DXF · MITUTOYO</span>
-            <h2 class="section-title" style="font-size:1.5rem;margin-bottom:22px;">Configurateur de Cahier des Charges (RFQ)</h2>
+            <span class="card-kicker">RFQ · DWG / DXF / PDF</span>
+            <h2 class="section-title" style="font-size:1.4rem;margin-bottom:20px;">Ou préparez votre demande en quelques clics (optionnel)</h2>
 
             <div class="rfq-group">
               <span class="rfq-label">1. Procédés demandés</span>
-              <div class="chip-grid"><label class="chip-check"><input type="checkbox" name="proc" value="Tournage CNC (Ø 8–1 600 mm)" checked /><span>Tournage CNC (Ø 8–1 600 mm)</span></label>
-<label class="chip-check"><input type="checkbox" name="proc" value="Fraisage 3/4/5 axes (jusqu&#x27;à 2 500 mm)" /><span>Fraisage 3/4/5 axes (jusqu&#x27;à 2 500 mm)</span></label>
+              <div class="chip-grid"><label class="chip-check"><input type="checkbox" name="proc" value="Tournage CNC (Ø 8–1 600 mm)" checked /><span>Tournage CNC (Ø 8–1 600 mm)</span></label>
+<label class="chip-check"><input type="checkbox" name="proc" value="Fraisage 3/4/5 axes (jusqu&#x27;à 2 500 mm)" /><span>Fraisage 3/4/5 axes (jusqu&#x27;à 2 500 mm)</span></label>
 <label class="chip-check"><input type="checkbox" name="proc" value="Rectification plane" /><span>Rectification plane</span></label>
 <label class="chip-check"><input type="checkbox" name="proc" value="Mécano-soudure TIG/MIG/Plasma" /><span>Mécano-soudure TIG/MIG/Plasma</span></label>
 <label class="chip-check"><input type="checkbox" name="proc" value="Azote liquide / Traitement acide" /><span>Azote liquide / Traitement acide</span></label>
@@ -111,10 +127,10 @@
               </div>
               <div>
                 <label class="rfq-label" for="rfqEnv">3. Enveloppe dimensionnelle</label>
-                <select class="field-input" id="rfqEnv" name="envelope"><option value="Ø 8 à Ø 250 mm (petit/moyen)">Ø 8 à Ø 250 mm (petit/moyen)</option>
-<option value="Ø 250 à Ø 600 mm">Ø 250 à Ø 600 mm</option>
-<option value="Ø 600 à Ø 1 600 mm / Grande longueur">Ø 600 à Ø 1 600 mm / Grande longueur</option>
-<option value="Fraisage jusqu&#x27;à 2 500 × 1 000 mm">Fraisage jusqu&#x27;à 2 500 × 1 000 mm</option></select>
+                <select class="field-input" id="rfqEnv" name="envelope"><option value="Ø 8 à Ø 250 mm (petit/moyen)">Ø 8 à Ø 250 mm (petit/moyen)</option>
+<option value="Ø 250 à Ø 600 mm">Ø 250 à Ø 600 mm</option>
+<option value="Ø 600 à Ø 1 600 mm / Grande longueur">Ø 600 à Ø 1 600 mm / Grande longueur</option>
+<option value="Fraisage jusqu&#x27;à 2 500 × 1 000 mm">Fraisage jusqu&#x27;à 2 500 × 1 000 mm</option></select>
               </div>
             </div>
 
@@ -151,13 +167,13 @@
 
             <div class="rfq-group">
               <label class="rfq-label" for="f_notes">Tolérances, délais souhaités ou précisions</label>
-              <textarea id="f_notes" class="field-input" rows="3" name="notes" placeholder="Ex. Alésage H7, concentricité 0,05 mm, livraison souhaitée..."></textarea>
+              <textarea id="f_notes" class="field-input" rows="3" name="notes" placeholder="Ex. Alésage H7, concentricité 0,05 mm, livraison souhaitée..."></textarea>
             </div>
 
             <span class="rfq-label">Aperçu du brief technique prêt à envoyer</span>
             <pre class="brief-terminal" id="rfqBriefPreview"></pre>
             <div style="display:flex;flex-wrap:wrap;gap:10px;">
-              <a class="btn btn-bronze" id="rfqSendEmail" href="mailto:info@precis-meca.fr">Ouvrir dans votre messagerie (info@precis-meca.fr) →</a>
+              <a class="btn btn-bronze" id="rfqSendEmail" href="mailto:info@precis-meca.fr">Envoyer ma demande par e-mail →</a>
               <button class="btn btn-glass" id="rfqCopyBtn" type="button">Copier le brief</button>
             </div>
           </form>
@@ -172,17 +188,17 @@
                 <span class="font-mono text-bronze">47°45'51"N · 7°09'18"E</span>
               </p>
               <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:16px;">
-                <a class="btn btn-bronze btn-sm" href="tel:+33389379645">03 89 37 96 45</a>
+                <a class="btn btn-bronze btn-sm" href="tel:+33389379645">03&#160;89&#160;37&#160;96&#160;45</a>
                 <a class="btn btn-glass btn-sm" href="mailto:info@precis-meca.fr">info@precis-meca.fr</a>
               </div>
-              <div class="hud-split"><div class="hud-mini"><span style="font-size:0.74rem;color:var(--ink-light-muted);">Mulhouse / A36</span><div class="hud-mini-val" style="font-size:1.05rem;">20 min</div></div>
-<div class="hud-mini"><span style="font-size:0.74rem;color:var(--ink-light-muted);">Bâle / Basel (CH)</span><div class="hud-mini-val" style="font-size:1.05rem;">40 min</div></div>
-<div class="hud-mini"><span style="font-size:0.74rem;color:var(--ink-light-muted);">Colmar</span><div class="hud-mini-val" style="font-size:1.05rem;">35 min</div></div>
-<div class="hud-mini"><span style="font-size:0.74rem;color:var(--ink-light-muted);">Freiburg (DE)</span><div class="hud-mini-val" style="font-size:1.05rem;">50 min</div></div></div>
+              <div class="hud-split"><div class="hud-mini"><span style="font-size:0.74rem;color:var(--ink-light-muted);">Mulhouse / A36</span><div class="hud-mini-val" style="font-size:1.05rem;">20 min</div></div>
+<div class="hud-mini"><span style="font-size:0.74rem;color:var(--ink-light-muted);">Bâle / Basel (CH)</span><div class="hud-mini-val" style="font-size:1.05rem;">40 min</div></div>
+<div class="hud-mini"><span style="font-size:0.74rem;color:var(--ink-light-muted);">Colmar</span><div class="hud-mini-val" style="font-size:1.05rem;">35 min</div></div>
+<div class="hud-mini"><span style="font-size:0.74rem;color:var(--ink-light-muted);">Freiburg (DE)</span><div class="hud-mini-val" style="font-size:1.05rem;">50 min</div></div></div>
             </div>
 
             <div class="card-dark">
-              <span class="card-kicker">LOGISTIQUE & BUREAUX</span>
+              <span class="card-kicker">LOGISTIQUE &amp; BUREAUX</span>
               <h3 class="card-title">Horaires d&#x27;Ouverture Dédoublés</h3>
               <div class="hud-row">
                 <div class="hud-row-meta"><strong style="color:var(--bronze-bright);">Administration</strong></div>
@@ -207,7 +223,7 @@
           </div>
         </div>
         <div class="grid-3"><article class="card-light"><h3 class="card-title">Quels formats de plans acceptez-vous pour le chiffrage ?</h3><p style="margin:0;color:var(--ink-dark-muted);">Nous utilisons AutoCAD (DAO) et GibbsCAM (FAO) : les fichiers DWG et DXF reçus par e-mail à info@precis-meca.fr sont intégrés directement dans notre chaîne FAO, accompagnés idéalement de vos plans PDF cotés.</p></article>
-<article class="card-light"><h3 class="card-title">Quelles sont vos capacités maximales en diamètre et longueur ?</h3><p style="margin:0;color:var(--ink-dark-muted);">Nous usinons du Ø 8 au Ø 1 600 mm en tournage (jusqu&#x27;à Ø 1 400 × 3 000 mm sur Gurutzpe CNC et 4 600 mm entre pointes sur Cazeneuve HB750) et jusqu&#x27;à 2 500 × 1 000 × 1 000 mm en centre d&#x27;usinage 4 axes continu AWEA.</p></article>
+<article class="card-light"><h3 class="card-title">Quelles sont vos capacités maximales en diamètre et longueur ?</h3><p style="margin:0;color:var(--ink-dark-muted);">Nous usinons du Ø 8 au Ø 1 600 mm en tournage (jusqu&#x27;à Ø 1 400 × 3 000 mm sur Gurutzpe CNC et 4 600 mm entre pointes sur Cazeneuve HB750) et jusqu&#x27;à 2 500 × 1 000 × 1 000 mm en centre d&#x27;usinage 4 axes continu AWEA.</p></article>
 <article class="card-light"><h3 class="card-title">Fournissez-vous un rapport de contrôle et un certificat matière ?</h3><p style="margin:0;color:var(--ink-dark-muted);">Oui. Toutes les pièces usinées sont vérifiées dans notre salle de contrôle (MMT Mitutoyo Crysta-Apex C, colonne LH-600, Unimaster) et livrées avec un rapport de contrôle. Les certificats matière sont fournis sur demande.</p></article></div>
       </div>
     </section>
@@ -217,8 +233,8 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <img src="/images/logo-precis-meca.svg" alt="Précis-Méca" style="height:44px;width:auto;margin-bottom:14px;" />
-          <p style="font-size:0.88rem;color:var(--ink-light-muted);margin:0 0 14px;">Entreprise familiale alsacienne de mécanique de précision et co-traitance CNC depuis 1986 (3e génération : Manuel &amp; Mégane Muller). Atelier de 2 000 m², 19 collaborateurs.</p>
+          <img src="/images/logo-precis-meca.svg" alt="Précis-Méca" style="height:40px;width:auto;margin-bottom:14px;" />
+          <p style="font-size:0.88rem;color:var(--ink-light-muted);margin:0 0 14px;">Atelier familial alsacien d&#x27;usinage CNC de précision depuis 1986 (Manuel &amp; Mégane Muller). Accompagnement personnalisé du prototype à la série.</p>
           <div style="display:flex;gap:10px;flex-wrap:wrap;">
             <a class="btn btn-glass btn-sm" href="https://fr.linkedin.com/company/groupe-precis-meca-sasu/" target="_blank" rel="noopener">LinkedIn</a>
             <a class="btn btn-glass btn-sm" href="https://www.facebook.com/people/Groupe-Precis-Meca-SASU/100041220146256/" target="_blank" rel="noopener">Facebook</a>
@@ -235,10 +251,10 @@
         </div>
         <div>
           <h3 class="footer-heading">Capacités &amp; Normes</h3>
-          <ul class="footer-list"><li>Tournage CNC : Ø 8 à Ø 1 600 mm</li>
-<li>Longueur entre pointes : jusqu&#x27;à 4 600 mm</li>
-<li>Fraisage 3/4/5 axes : jusqu&#x27;à 2 500 mm</li>
-<li>Précision : 1/100e mm (± 0,01 mm)</li>
+          <ul class="footer-list"><li>Tournage CNC : Ø 8 à Ø 1 600 mm</li>
+<li>Longueur entre pointes : jusqu&#x27;à 4 600 mm</li>
+<li>Fraisage 3/4/5 axes : jusqu&#x27;à 2 500 mm</li>
+<li>Précision : 1/100e mm (± 0,01 mm)</li>
 <li>DAO AutoCAD · FAO GibbsCAM (DWG / DXF)</li></ul>
         </div>
         <div>
@@ -253,7 +269,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 1986–2026 GROUPE PRECIS MECA SASU · SIREN 491 735 155 · RCS Mulhouse · Capital 719 850 €</span>
+        <span>© 1986–2026 GROUPE PRECIS MECA SASU · SIREN 491 735 155 · RCS Mulhouse · Capital 719 850 €</span>
         <a href="/fr/mentions-legales">Mentions légales &amp; Confidentialité</a>
       </div>
     </div>
